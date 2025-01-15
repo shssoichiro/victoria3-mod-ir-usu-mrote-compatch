@@ -1,4 +1,4 @@
-pm_hydroelectric_plant = {
+﻿pm_hydroelectric_plant = {
 	texture = "gfx/interface/icons/production_method_icons/hydroelectric_plant.dds"
 	state_modifiers = {
 		workforce_scaled = {

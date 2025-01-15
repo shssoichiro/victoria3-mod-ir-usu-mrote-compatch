@@ -1,4 +1,4 @@
-pm_market_squares = {
+﻿pm_market_squares = {
 	texture = "gfx/interface/icons/production_method_icons/market_squares.dds"
 	ai_value = 1000
 	unlocking_technologies = {
