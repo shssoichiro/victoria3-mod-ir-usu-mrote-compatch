@@ -1,0 +1,79 @@
+# General Electric
+company_general_electric = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_general_electric.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_MASSACHUSETTS
+		STATE_NEW_YORK
+	}
+	building_types = {
+		building_radio_industry
+		building_power_plant
+		usu_building_hydro_power_plant
+	}
+	extension_building_types = {
+		building_motor_industry
+		ppp_building_power_grid
+	}
+	possible_prestige_goods = {
+		prestige_good_radiola_radios
+	}
+	potential = {
+		has_interest_marker_in_region = region_new_england
+	}
+	attainable = {
+		hidden_trigger = {
+			# Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_MASSACHUSETTS
+					state_region = s:STATE_NEW_YORK
+				}
+			}
+		}
+	}
+	possible = {
+		has_technology_researched = telephone
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_MASSACHUSETTS
+				state_region = s:STATE_NEW_YORK
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_radio_industry
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		building_motor_industry_throughput_add = 0.1
+		country_weekly_innovation_mult = 0.05
+	}
+	ai_will_do = {
+		has_technology_researched = telephone
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_MASSACHUSETTS
+				state_region = s:STATE_NEW_YORK
+			}
+			is_incorporated = yes
+		}
+	}
+	ai_construction_targets = {
+		building_radio_industry = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_MASSACHUSETTS
+					state_region = s:STATE_NEW_YORK
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+	ai_weight = {
+		value = 3		# Higher base value for flavored companies
+	}
+}
