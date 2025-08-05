@@ -2,6 +2,6 @@
 
 ![Preview](thumbnail.png)
 
-**Tested With V3 Version: 1.8.6**
+**Tested With V3 Version: 1.9.7**
 
-Fixes compatibility for govt admins, power plants, and railways, and re-removes hardwood.
+Fixes compatibility for govt admins, power plants, and railways.
